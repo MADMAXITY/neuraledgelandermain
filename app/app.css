@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "./globals.css";
+
+/* Tailwind v4 Content Configuration */
+@source "../app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../lib/**/*.{js,ts,jsx,tsx,mdx}";
