@@ -22,6 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://neuraledge.live"),
   title: {
     default: "NeuralEdge | AI Automation Solutions",
     template: "%s | NeuralEdge",
