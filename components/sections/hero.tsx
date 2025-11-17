@@ -134,7 +134,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
+      <div className="relative z-10 container mx-auto px-6 sm:px-8 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             {/* Left Column - Text Content */}

@@ -53,7 +53,7 @@ export function Features() {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgb(var(--bg-secondary)/0.3)] to-transparent" />
 
-      <div className="container mx-auto relative">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-8 relative">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -15,7 +15,7 @@ const techPartners = [
 export function TrustBar() {
   return (
     <section className="py-16 relative border-y border-white/[0.05]">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -225,7 +225,7 @@ export default function WorkflowDetailPage() {
   return (
     <>
       <section className="min-h-screen pt-24 pb-20">
-        <div className="container mx-auto max-w-6xl px-4">
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8 lg:px-8">
           {/* Breadcrumb */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

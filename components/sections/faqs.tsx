@@ -45,7 +45,7 @@ export function FAQs() {
 
   return (
     <section className="py-32 relative">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <motion.div

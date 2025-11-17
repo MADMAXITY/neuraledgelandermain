@@ -92,8 +92,8 @@ export function Footer() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgb(var(--bg-secondary)/0.5)]" />
 
-      <div className="relative container mx-auto py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+      <div className="relative container mx-auto px-6 sm:px-8 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center">

@@ -26,7 +26,7 @@ export function CTA() {
         />
       </div>
 
-      <div className="container mx-auto relative">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
