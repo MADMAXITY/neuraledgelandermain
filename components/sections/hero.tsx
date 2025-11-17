@@ -214,18 +214,19 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4"
               >
-                <Link href="/contact">
-                  <GlassButton variant="solid" size="lg" className="group whitespace-nowrap" glow>
-                    <span className="flex items-center gap-2">
-                      <span>Book a Free AI Integration Audit</span>
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <GlassButton variant="solid" size="lg" className="group w-full sm:w-auto whitespace-nowrap" glow>
+                    <span className="flex items-center justify-center gap-2">
+                      <span className="hidden sm:inline">Book a Free AI Integration Audit</span>
+                      <span className="sm:hidden">Book Free AI Audit</span>
                       <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
                     </span>
                   </GlassButton>
                 </Link>
-                <Link href="/workflows">
-                  <GlassButton variant="secondary" size="lg" className="whitespace-nowrap">
+                <Link href="/workflows" className="w-full sm:w-auto">
+                  <GlassButton variant="secondary" size="lg" className="w-full sm:w-auto whitespace-nowrap">
                     Explore 5K+ Workflows
                   </GlassButton>
                 </Link>
@@ -246,7 +247,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="flex flex-nowrap gap-2 md:gap-3"
+                className="flex flex-wrap gap-2 md:gap-3"
               >
                 {trustBadges.map((badge, index) => {
                   const Icon = badge.icon;
@@ -256,15 +257,52 @@ export function Hero() {
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.7 + index * 0.1 }}
-                      className="inline-flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] whitespace-nowrap flex-shrink-0"
+                      className="inline-flex items-center gap-1.5 md:gap-2 px-2.5 md:px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] whitespace-nowrap"
                     >
                       <Icon className="w-3 h-3 text-[rgb(var(--success-primary))] flex-shrink-0" />
-                      <span className="text-[11px] md:text-xs text-[rgb(var(--text-secondary))]">
+                      <span className="text-[10px] sm:text-[11px] md:text-xs text-[rgb(var(--text-secondary))]">
                         {badge.text}
                       </span>
                     </motion.div>
                   );
                 })}
+              </motion.div>
+
+              {/* Mobile-only Stats Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="lg:hidden"
+              >
+                <GlassCard className="p-4">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center">
+                      <div className="text-xl font-bold text-[rgb(var(--accent-primary))]">
+                        847
+                      </div>
+                      <div className="text-[10px] text-[rgb(var(--text-tertiary))]">
+                        Tasks/Day
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-xl font-bold text-[rgb(var(--success-primary))]">
+                        99.9%
+                      </div>
+                      <div className="text-[10px] text-[rgb(var(--text-tertiary))]">
+                        Uptime
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-xl font-bold text-[rgb(var(--warning-primary))]">
+                        40h
+                      </div>
+                      <div className="text-[10px] text-[rgb(var(--text-tertiary))]">
+                        Saved/Week
+                      </div>
+                    </div>
+                  </div>
+                </GlassCard>
               </motion.div>
             </motion.div>
 
@@ -273,7 +311,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative"
+              className="relative hidden lg:block"
             >
               {/* Workflow Preview Card */}
               <GlassCard hover glow className="p-8">
@@ -386,8 +424,8 @@ export function Hero() {
               </GlassCard>
 
               {/* Floating Tech Logos */}
-              <div className="absolute -bottom-8 -left-8 -right-8">
-                <div className="flex items-center justify-center gap-4 flex-wrap">
+              <div className="hidden lg:block absolute -bottom-8 left-0 right-0">
+                <div className="flex items-center justify-center gap-4 flex-wrap px-4">
                   {techLogos.map((tech, index) => {
                     const Icon = tech.icon;
                     return (
