@@ -225,8 +225,8 @@ export function Hero() {
                   </GlassButton>
                 </Link>
                 <Link href="/workflows">
-                  <GlassButton variant="secondary" size="lg">
-                    Explore 10,000+ Workflows
+                  <GlassButton variant="secondary" size="lg" className="whitespace-nowrap">
+                    Explore 5K+ Workflows
                   </GlassButton>
                 </Link>
               </motion.div>
